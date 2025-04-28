@@ -7,7 +7,7 @@
 
 #pragma comment(lib, "ws2_32.lib")
 
-#define SERVER_IP "127.0.0.1"  // Change if needed
+#define SERVER_IP "192.168.1.229"  // Change if needed
 #define SERVER_PORT 22
 //123#@29
 WSADATA wsa;
@@ -52,6 +52,7 @@ int authenticate() {
             printf("Recv failed or connection closed.\n");
             return -1;
         }
+
         buffer[recv_size] = '\0';
 
         printf("--- DIR ---\n %s\n\n", buffer);
